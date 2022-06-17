@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- META -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS, JS, TITLE -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Shop Card</title>
+</head>
+<body>
+
+<!-- ------------------- 01. NAVBAR ------------------- -->
+
+    <nav class="navbar">
+        <div class="icon-logo">
+            <a href="#"><img src="/assets/navbar/logo.svg" alt=""></a>
+        </div>
+
+        
+        <div class="icons">
+            <a href="#"><img src="/assets/navbar/person.svg" alt="person"></a>
+            <a href="#"><img src="/assets/navbar/favorite.svg" alt="favorite"></a>
+            <a href="#"><img src="/assets/navbar/bag.svg" alt="bag"></a>
+        </div>    
+    </nav>
+
+<!-- ------------------- 02. CARD ------------------- -->
+
+    <div class="card">
+        <div class="card-slider">
+                <img data-photo data-active src="/assets/slider/slider-image (1).png" alt="slider-image-1">
+                <img data-photo src="/assets/slider/slider-image (2).png" alt="slider-image-2">
+                <img data-photo src="/assets/slider/slider-image (3).png" alt="slider-image-3">
+                <img data-photo src="/assets/slider/slider-image (4).png" alt="slider-image-4">
+                <img data-photo src="/assets/slider/slider-image (5).png" alt="slider-image-5">
+                <img data-photo src="/assets/slider/slider-image (6).png" alt="slider-image-6">
+        </div>
+
+        <div class="card-description">
+            <div class="title">
+                <p class="bold-title">Пижама для девочек</p>
+                <p class="thin-title">Арт. 02765/46</p>
+            </div>
+            <div class="rating">
+                Отзывы
+                <div class="stars">
+                    <img class="star" data-star="0" src="/assets/description/star-empty.svg" alt="">
+                    <img class="star" data-star="1" src="/assets/description/star-empty.svg" alt="">
+                    <img class="star" data-star="2" src="/assets/description/star-empty.svg" alt="">
+                    <img class="star" data-star="3" src="/assets/description/star-empty.svg" alt="">
+                    <img class="star" data-star="4" src="/assets/description/star-empty.svg" alt="">
+                </div>
+                14 отзывов
+                <a class="arrow" href="#"><img src="/assets/description/arrow.svg" alt=""></a>
+            </div>
+            <div class="price">
+                <div class="price-amount">
+                    <p class="bold-price">800 ₽</p>
+                    <s class="thin-price">1 500 ₽</s>
+                    <a class="arrow" href="#"><img src="/assets/description/arrow.svg" alt=""></a>
+                </div>
+
+                <div class="sale">
+                    <p class="bordered">скидка -36%</p>
+                    <p class="bordered">акция -20%</p>
+                </div>
+            </div>
+
+            <div class="size">
+                <select class="bordered-select" name="" id="">
+                    <option class="bordered-option">Выбрать размер</option>
+                </select>
+                <div><a class="link">Определить размер</a></div>
+            </div>
+
+            <div class="buy">
+                <div class="buy-row">
+                    <div class="manage-quantity">
+                        <button class="light-button" data-increment>+</button>
+                        <button class="light-button" disabled data-amount>1</button>
+                        <button class="light-button" data-decrement>-</button>
+                    </div>
+
+                    <button class="dark-button bin-button">Добавить в корзину</button>
+                    <button class="dark-button fav-button"><img class="fav-desciption-icon" src="/assets/description/favorite.svg" alt="favorite"></button>
+                </div>
+                
+                <a class="link modal-trigger" data-trigger-modal>Купить в 1 клик</a>
+
+                <hr class="hr">
+                <div class="other-info">
+                    <a class="link"><img src="/assets/description/clothes.svg" alt="">Описание товара</a>
+                    <a class="link"><img src="/assets/description/clock.svg" alt="">Доставка и возврат</a>
+                    <a class="link"><img src="/assets/description/pay.svg" alt="">Способы оплаты</a>
+                </div>
+                
+            </div>
+            
+        </div>
+
+    </div>
+
+<!-- ------------------- 03. FOOTER ------------------- -->
+
+    <footer class="footer">
+        <div class="footer-info">
+            <div class="footer-info-section">
+                <p class="footer-title">ПОКУПАТЕЛЯМ</p>
+                <a>Каталог</a>
+                <a>Акции</a>
+                <a>Бренды</a>
+            </div>
+            
+            <div class="footer-info-section">
+                <p class="footer-title">О НАС</p>
+                <a>О компании</a>
+                <a>Новости</a>
+                <a>Команда</a>
+            </div>
+            
+        </div>
+
+        <form class="footer-form">
+            УЗНАЙТЕ ПЕРВЫМИ О НОВИНКАХ И АКЦИЯХ 
+            <input class="footer-input" type="text" placeholder="Адрес электронной почты">
+            <button class="footer-button">Подписаться</button>
+        </form>
+    </footer>
+
+<!-- ------------------- 04. MODAL ------------------- -->
+
+    <div class="modal" data-modal>
+            <img data-cross class="modal-cross" src="/assets/modal/cross.svg" alt="cross">
+            <h2 class="modal-header">Купить в 1 клик</h2>
+            <form class="modal-form" action="sumbit">
+                <input class="modal-input" type="text" placeholder="+7 (---) --- -- --">
+                <input class="modal-input" type="text" placeholder="Ваше имя">
+            </form>
+            <hr class="modal-hr">
+            <p class="modal-small-text">Нажимая кнопку “Отправить”, я даю согласие на обработку моих персональных данных в соответствии с 
+                Условиями конфиденциальности</p>
+            <button class="dark-button modal-button">Отправить</button>
+    </div>
+
+</body>
+</html>
